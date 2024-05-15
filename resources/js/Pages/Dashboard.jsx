@@ -28,7 +28,7 @@ export default function Dashboard() {
             </td>
 
             {/* redirect url */}
-            <td><a target={"_blank"} href={"https://" + url.redirect_url}>{url.redirect_url}</a></td>
+            <td><a target={"_blank"} href={url.redirect_url}>{url.redirect_url}</a></td>
 
             {/* actions of the shortened url, edit/delete */}
             <td>
