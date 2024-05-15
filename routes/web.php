@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UrlController;
 use App\Http\Middleware\RedirectIfLoggedIn;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,3 +33,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/dashboard/{id}', [DashboardController::class, 'update']);
     Route::delete('/dashboard/{id}', [DashboardController::class, 'delete']);
 });
+
+// redirect to the shortened url
+Route::get('/{shortened_url}', [UrlController::class, 'index']);
