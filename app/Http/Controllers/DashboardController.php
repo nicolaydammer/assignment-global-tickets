@@ -22,7 +22,7 @@ class DashboardController extends Controller
         return Inertia::render('Dashboard', ['urlData' => $userUrls]);
     }
 
-    public function create(Request $request)
+    public function create(Request $request): Response
     {
         return Inertia::render('DashboardCreate');
     }
@@ -53,9 +53,7 @@ class DashboardController extends Controller
         $url->user()->associate($user);
         $url->save();
 
-        $userUrls = $user->urls()->get()->all();
-
-        return to_route('dashboard')->with(['urlData' => $userUrls]);
+        return to_route('dashboard');
     }
 
     public function update(DashboardUpdateRequest $request, int $id): RedirectResponse
