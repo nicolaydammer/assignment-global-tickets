@@ -1,0 +1,65 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+html{
+    height: 100vh;
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+main{
+    min-height: 100%;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+body{
+    background-color: $background-color;
+    color: $text-color;
+
+}
+
+header{
+    background-color: $header-background-color;
+    color: $alt-text-color;
+    height: 11vh;
+}
+
+.iconColorYellow{
+    color: $alt-text-color;
+}
+
+.header-content{
+    padding-top: 2.2vh;
+}
+
+#navbar{
+    padding-left: 100px;
+}
+
+.submitButton{
+    background-color: black;
+    color: $alt-text-color;
+    border-color: darkgray;
+}
+
+.submitButton:hover{
+    background-color: inherit;
+    color: inherit;
+    border-color:inherit;
+}
+
+.actions{
+    margin-left: 10px;
+}
+.copyToClipboard{
+    margin-left: 5px;
+}
+.copyToClipboard:hover{
+    cursor: pointer;
+}
+
+table {
+    background-color: $background-color;
+}
